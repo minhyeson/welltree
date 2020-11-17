@@ -1,0 +1,249 @@
+/* style.css */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+li {list-style-type: none;}
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* header */
+#main_header {
+    width: 1200px;
+    height: 100px;
+    margin: 0 auto;
+    position: relative;
+    /* outline: 1px solid red; */
+}
+
+#main_header > h1 {
+    position: absolute;
+    top: 13px; left: 30px;
+}
+
+/* gnb */
+#main_header > #gnb {
+    width: 980px;
+    float: right;
+    /*outline: 1px solid blue; */
+    position: relative;
+}
+
+#main_header > #gnb > .depth1 > li {
+    width: calc(100% / 6);
+    /* outline: 1px solid green; */
+    text-align: center;
+    margin-top: 40px;
+    float: left;
+    height: 50px;
+}
+
+#main_header > #gnb > .depth1 > li > a {
+    display: block;
+    font-weight: 500;
+    font-size: 18px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+#main_header > #gnb > .depth1 > li > a::after {
+    position: absolute;
+    content: "";
+    width: calc(100% / 6);
+    bottom: 0;
+    height: 4px;
+    background: #A0BA25;
+    background-clip: content-box;
+    transition-duration: 0.5s;
+    display: none;
+}
+
+#main_header > #gnb > .depth1 > li:hover a::after {
+    display: block;
+}
+
+/* depth2 */
+#main_header > #gnb .depth2 {
+    position: absolute;
+    top: 100px;
+    width: calc(1000px / 6);
+    line-height: 34px;
+    font-size: 16px;
+    height: 220px;
+    z-index: 9999;
+    display: none;    
+}
+
+#gnb .depth2 > li {
+    padding-top: 10px;
+}
+
+#gnb .depth2 > li:first-child {
+    padding-top: 24px;
+}
+
+#gnb .depth2 > li > a{
+    width: 100%;
+    display: block;
+    color: #333;
+    font-weight: 300;
+}
+
+#gnb .depth2 > li > a:hover {
+    font-weight: 500;
+    color: #A0BA25;
+}
+
+#gnb_bg {
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    /* height: 220px; */
+    /* background: rgba(255 , 255, 255, 0.9); */
+    background: #fff;
+    z-index: 1;
+    /*outline: 1px solid red;*/
+}
+
+#gnb_bg.show {
+    height: 220px;
+    background: #fff;
+}
+
+
+#global_aside {
+    position: absolute;
+    left: 1200px; top: 100px;
+    width: 90px;
+}
+
+#global_aside a {
+    position: absolute;
+    top: 120px;
+    display: block;
+    width: 72px; height: 56px;
+}
+
+/* visual */
+#visual {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#visual > .main_img {
+    width: 1200px;
+    display: block;
+}
+
+/* banner */
+#banner {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#service {
+    position: relative;
+    width: 600px;
+    display: block;
+}
+
+#service > h1 {
+    position: absolute;
+    color: white;
+    top: 80px; left: 40px;
+    font-size: 40px;
+}
+
+#service > .s_btn {
+    position: absolute;
+    width: 130px; height: 40px;
+    top: 164px; left: 92px;
+    background: #A0BA25;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 40px;
+}
+
+#service > .s_btn > a {
+    color: white;
+    font-weight: bold;
+}
+
+#join {
+    position: relative;
+    width: 600px;
+    display: block;
+}
+
+#join > h1 {
+    position: absolute;
+    color: white;
+    font-size: 40px;
+    top: 80px; left: 90px;
+}
+
+#join > .j_btn {
+    position: absolute;
+    width: 130px; height: 40px;
+    top: 164px; left: 100px;
+    background: #A0BA25;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 40px;  
+}
+
+#join > .j_btn > a {
+    color: white;
+    font-weight: bold;
+}
+
+#banner > #service,
+#banner > #join {
+    float: left;
+}
+
+#service > .s_btn:hover,
+#join > .j_btn:hover {
+    background: #0472BA;
+    transition: 0.5s;
+}
+
+/* footer */
+#main_footer {
+    clear: both;
+    position: relative;
+    width: 1200px; height: 150px;
+    margin: 0 auto;
+    background: #333;
+    color: white;
+    font-size: 14px;
+}
+
+#main_footer > .f_text {
+    position: absolute;
+    padding-top: 53px;
+    padding-left: 57px;
+}
+
+#main_footer > .f_text > .f_menu > li {
+    float: left;
+    margin-right: 30px;
+    margin-bottom: 8px;
+}
+
+#main_footer > .f_text > .f_menu > p {
+    clear: both;
+}
+
+#main_footer > .f_text > .f_menu > li > a {
+    color: white;
+}
+
+#main_footer > img {
+    position: absolute;
+    top: 38px; right: 60px;
+    opacity: 0.3;
+}
